@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "drv_installer", "drv_installer.vcxproj", "{21E6761F-85F9-4581-AA73-A5D5A7F9EC78}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pizhma_filter", "..\..\pizhma_filter\pizhma_filter.vcxproj", "{9AC62DEF-A3EB-4369-A483-E369F6E39D9A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "drv_starter", "..\drv_starter\drv_starter.vcxproj", "{0E3B2003-8964-436F-8176-E6922560C3D3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "drv_uninstaller", "..\drv_uninstaller\drv_uninstaller.vcxproj", "{93DAF4BD-7DB5-463D-90D8-D2223E112704}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "drv_stopper", "..\drv_stopper\drv_stopper.vcxproj", "{90CF560E-4E13-48F6-A36E-8003759625D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+		Win7 Debug|Win32 = Win7 Debug|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{21E6761F-85F9-4581-AA73-A5D5A7F9EC78}.Debug|Win32.ActiveCfg = Debug|Win32
+		{21E6761F-85F9-4581-AA73-A5D5A7F9EC78}.Debug|Win32.Build.0 = Debug|Win32
+		{21E6761F-85F9-4581-AA73-A5D5A7F9EC78}.Release|Win32.ActiveCfg = Release|Win32
+		{21E6761F-85F9-4581-AA73-A5D5A7F9EC78}.Release|Win32.Build.0 = Release|Win32
+		{21E6761F-85F9-4581-AA73-A5D5A7F9EC78}.Win7 Debug|Win32.ActiveCfg = Win7 Debug|Win32
+		{21E6761F-85F9-4581-AA73-A5D5A7F9EC78}.Win7 Debug|Win32.Build.0 = Win7 Debug|Win32
+		{9AC62DEF-A3EB-4369-A483-E369F6E39D9A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9AC62DEF-A3EB-4369-A483-E369F6E39D9A}.Debug|Win32.Build.0 = Debug|Win32
+		{9AC62DEF-A3EB-4369-A483-E369F6E39D9A}.Release|Win32.ActiveCfg = Release|Win32
+		{9AC62DEF-A3EB-4369-A483-E369F6E39D9A}.Release|Win32.Build.0 = Release|Win32
+		{9AC62DEF-A3EB-4369-A483-E369F6E39D9A}.Win7 Debug|Win32.ActiveCfg = Win7 Debug|Win32
+		{9AC62DEF-A3EB-4369-A483-E369F6E39D9A}.Win7 Debug|Win32.Build.0 = Win7 Debug|Win32
+		{0E3B2003-8964-436F-8176-E6922560C3D3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0E3B2003-8964-436F-8176-E6922560C3D3}.Debug|Win32.Build.0 = Debug|Win32
+		{0E3B2003-8964-436F-8176-E6922560C3D3}.Release|Win32.ActiveCfg = Release|Win32
+		{0E3B2003-8964-436F-8176-E6922560C3D3}.Release|Win32.Build.0 = Release|Win32
+		{0E3B2003-8964-436F-8176-E6922560C3D3}.Win7 Debug|Win32.ActiveCfg = Win7 Debug|Win32
+		{0E3B2003-8964-436F-8176-E6922560C3D3}.Win7 Debug|Win32.Build.0 = Win7 Debug|Win32
+		{93DAF4BD-7DB5-463D-90D8-D2223E112704}.Debug|Win32.ActiveCfg = Debug|Win32
+		{93DAF4BD-7DB5-463D-90D8-D2223E112704}.Debug|Win32.Build.0 = Debug|Win32
+		{93DAF4BD-7DB5-463D-90D8-D2223E112704}.Release|Win32.ActiveCfg = Release|Win32
+		{93DAF4BD-7DB5-463D-90D8-D2223E112704}.Release|Win32.Build.0 = Release|Win32
+		{93DAF4BD-7DB5-463D-90D8-D2223E112704}.Win7 Debug|Win32.ActiveCfg = Win7 Debug|Win32
+		{93DAF4BD-7DB5-463D-90D8-D2223E112704}.Win7 Debug|Win32.Build.0 = Win7 Debug|Win32
+		{90CF560E-4E13-48F6-A36E-8003759625D4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{90CF560E-4E13-48F6-A36E-8003759625D4}.Debug|Win32.Build.0 = Debug|Win32
+		{90CF560E-4E13-48F6-A36E-8003759625D4}.Release|Win32.ActiveCfg = Release|Win32
+		{90CF560E-4E13-48F6-A36E-8003759625D4}.Release|Win32.Build.0 = Release|Win32
+		{90CF560E-4E13-48F6-A36E-8003759625D4}.Win7 Debug|Win32.ActiveCfg = Win7 Debug|Win32
+		{90CF560E-4E13-48F6-A36E-8003759625D4}.Win7 Debug|Win32.Build.0 = Win7 Debug|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

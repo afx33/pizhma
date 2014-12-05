@@ -1,0 +1,111 @@
+;;;
+;;; Pizhma
+;;;
+;;;
+;;;
+
+[Version]
+Signature   = "$Windows NT$"
+Class       = "ActivityMonitor"                         ;This is determined by the work this filter driver does
+ClassGuid   = {F61F9B15-248F-450C-B843-FEE7DA7A59FA}    ;This value is determined by the Class
+Provider    = %Msft%
+DriverVer   = 24/11/2013,1.0.0.0
+CatalogFile = pizhma.cat
+
+
+[DestinationDirs]
+DefaultDestDir          = 12
+;;Pizhma.DriverFiles     = 12            ;%windir%\system32\drivers
+Pizhma.DriverFiles     = "C:\FilterDriver"
+Pizhma.UserFiles       = 10,FltMgr     ;%windir%\FltMgr
+
+;;
+;; Default install sections
+;;
+
+[DefaultInstall]
+OptionDesc          = %ServiceDescription%
+CopyFiles           = Pizhma.DriverFiles, Pizhma.UserFiles
+
+[DefaultInstall.Services]
+AddService          = %ServiceName%,,Pizhma.Service
+
+;;
+;; Default uninstall sections
+;;
+
+[DefaultUninstall]
+DelFiles   = Pizhma.DriverFiles, Pizhma.UserFiles
+
+[DefaultUninstall.Services]
+DelService = %ServiceName%,0x200      ;Ensure service is stopped before deleting
+
+;
+; Services Section
+;
+
+[Pizhma.Service]
+DisplayName      = %ServiceName%
+Description      = %ServiceDescription%
+ServiceBinary    = %12%\%DriverName%.sys        ;%windir%\system32\drivers\
+Dependencies     = FltMgr
+ServiceType      = 2                            ;SERVICE_FILE_SYSTEM_DRIVER
+StartType        = 3                            ;SERVICE_DEMAND_START
+ErrorControl     = 1                            ;SERVICE_ERROR_NORMAL
+LoadOrderGroup   = "FSFilter Activity Monitor"
+AddReg           = Pizhma.AddRegistry
+
+;
+; Registry Modifications
+;
+
+[Pizhma.AddRegistry]
+HKR,"Instances","DefaultInstance",0x00000000,%DefaultInstance%
+HKR,"Instances\"%Instance1.Name%,"Altitude",0x00000000,%Instance1.Altitude%
+HKR,"Instances\"%Instance1.Name%,"Flags",0x00010001,%Instance1.Flags%
+HKR,"Instances\"%Instance2.Name%,"Altitude",0x00000000,%Instance2.Altitude%
+HKR,"Instances\"%Instance2.Name%,"Flags",0x00010001,%Instance2.Flags%
+HKR,"Instances\"%Instance3.Name%,"Altitude",0x00000000,%Instance3.Altitude%
+HKR,"Instances\"%Instance3.Name%,"Flags",0x00010001,%Instance3.Flags%
+
+;
+; Copy Files
+;
+
+[Pizhma.DriverFiles]
+%DriverName%.sys
+
+[Pizhma.UserFiles]
+%UserAppName%.exe
+
+[SourceDisksFiles]
+pizhma.sys = 1,,
+pizhma.exe = 1,,
+
+[SourceDisksNames]
+1 = %DiskId1%,,,
+
+;;
+;; String Section
+;;
+
+[Strings]
+Msft                    = "No Corporation"
+ServiceDescription      = "Pizhma mini-filter driver"
+ServiceName             = "Pizhma"
+DriverName              = "pizhma"
+UserAppName             = "pizhma"
+DiskId1                 = "Pizhma Device Installation Disk"
+
+;Instances specific information.
+DefaultInstance         = "Pizhma - Top Instance"
+Instance1.Name          = "Pizhma - Middle Instance"
+Instance1.Altitude      = "370000"
+Instance1.Flags         = 0x1          ; Suppress automatic attachments
+Instance2.Name          = "Pizhma - Bottom Instance"
+Instance2.Altitude      = "361000"
+Instance2.Flags         = 0x1          ; Suppress automatic attachments
+Instance3.Name          = "Pizhma - Top Instance"
+Instance3.Altitude      = "385100"
+Instance3.Flags         = 0x1          ; Suppress automatic attachments
+
